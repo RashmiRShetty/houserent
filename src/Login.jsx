@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Header from "./components/Header";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -22,16 +23,7 @@ export default function LoginPage() {
   return (
     <div style={styles.container}>
       <div className="reg-overlay"></div>
-      <header className="reg-header">
-        <Link to="/home" className="brand-link-inline">
-          <h1 className="brand-name">Elite Nest</h1>
-        </Link>
-        <div className="reg-links">
-          <Link to="/home" className="reg-link">Home</Link>
-          <Link to="/home#contact" className="reg-link">Contact</Link>
-          <Link to="/home#about" className="reg-link">About Us</Link>
-        </div>
-      </header>
+      <Header />
       <div style={styles.box}>
         <h2 style={styles.title}>Login</h2>
 
